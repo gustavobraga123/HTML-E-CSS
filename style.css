@@ -1,0 +1,320 @@
+/**
+* Folha de estilo do site html5 + CSS3
+* @author Gustavo Braga
+*/
+
+/*************** Importando fontes ****************/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans&display=swap');
+
+/*************** Principal *****************/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e8e8e8;
+}
+
+/*
+ # (id) . (class) - Podemos criar um estilo para a TAG, id ou class
+*/
+
+#main{
+    max-width: 1024px;
+    background-color: #ffffff;
+    margin: 0 auto; /* centraliza a div */
+    margin-top: 50px; /* box model */
+}
+
+/******************* header *********************/
+
+
+#social{
+    float: right;
+    /* box model completo especificando top right bottom left */
+    padding: 20px 20px 0px 0px;    
+}
+
+#logo{
+    /* box model completo */
+    padding: 20px;
+}
+/***********************************Menu************************************/
+/*O bloco abaixo compatibiliza os navegadores*/
+nav {
+    width: 100%;
+   position: absolute;
+   max-width: 1024px;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav > ul > li {
+    float: left;
+    width: 25%;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #03738C;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    background-color: #023859;
+    transition: all 0.2s;
+}
+
+nav li ul{
+    display: none;
+}
+
+nav li:hover ul{
+    display: block;
+    
+   
+}
+
+.Detalhes:after{
+    content: ''; 
+    border: 5px solid transparent; 
+    border-top-color: #e8e8e8;
+    display: inline-block;
+    vertical-align: middle;
+}
+.Mobile{
+    display: none;
+}
+.Fixar{
+    top: 0;
+    position: fixed;
+}
+/*Yratamento responsivo  */
+footer{
+    background-color: #023859;
+    margin-top: 50px;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    color: white;
+    font-size: 0.750em;
+
+
+}
+#banner{
+    margin-top: 52px;
+    background-image: url('imagens/banner.jpg');
+    height: 350px;
+    display: flex;
+    align-items: center;
+    
+}#banner h1{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 4em;
+    text-transform: uppercase;
+    
+}
+#html5{
+    color: goldenrod;}
+#css3{
+    color: blue;
+}
+#heading{
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+    font-weight: 100;
+}
+#heading h2{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+}
+#selo{
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+/*Destaque */
+#destaque{
+    max-width: 1024px;
+    height: 320px;
+}
+
+.card{
+    width: 30%;
+    height: 320px;
+    float: left;
+    margin-left: 2.1%;
+    border: 3px solid silver;
+    position: relative;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+.card p{
+    padding-top: 10px;
+    
+}
+.card h3{
+    text-align: center
+}
+
+.card a {
+    width: 80px;
+    height: 30px;
+    background-color: #023859;
+    color: white;
+    text-decoration: none;
+    font-size: 0.850em;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    padding-top: 7px;
+    cursor: pointer;
+
+}
+
+
+/*foto face*/
+
+
+
+#sobre{
+    max-width: 1024px;
+    height: 320px;
+
+}
+
+#Conteudo{
+    text-align: center
+
+}
+
+    
+.face{
+
+    width: 30%;
+    height: 320px;
+    margin-left: auto;
+    margin-top: 80px;
+    margin-right: auto;
+    display: block;
+}
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+#Conteudo h2{
+    text-align: left;
+    width: 80%;
+   
+    padding: 40px;
+}
+/*HTML5*/
+
+#html5{
+    max-width: 1024px;
+    height: 320px;
+
+}
+
+#Conteudo{
+    text-align: left;
+    width: 50%;
+    padding: 100px;
+    
+}
+.Conteudos{
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+.Conteudos p{
+    text-align: left;
+}
+
+
+
+
+/*************** Tratamento Responsivo ***************/
+/**** tornar todas as imagens responsivas ****/ 
+img {
+    max-width: 100%;
+}
+
+/* o bloco abaixo modifica o comportamento do CSS para telas
+com tamanho de até 480px */
+@media screen and (max-width: 480px){
+    
+    /*************** principal *****************/
+    body{
+        margin: 0; /* Zera todas as margens */
+    }
+
+    #main{
+        margin: 0;
+    }
+    /*************** header ****************/
+    
+    header{
+        text-align: center; /* centralizar todos elementos */
+    }
+
+   #social{
+       float: none;
+       padding-right: 0;
+   }
+   .Mobile{
+    text-decoration: none;
+    background-color: #03738C;
+    color: white;
+    padding: 15px;
+    display: block;
+}
+nav ul{
+    display: none;
+}
+    nav >ul > li{
+        float: none;
+        width: 100%;
+    }
+    nav ul li a{
+        text-align: left;
+
+    }
+    nav li ul li{
+        padding-left: 40px;
+        background-color: #023859;
+    }
+
+#destaque{
+    max-width: 325px;
+    margin:0 auto;
+}
+.card{
+    float: none;
+    width: 100%;
+    height: 320px;
+}
+.Detalhes:after{
+    display: none;}
+
+}
